@@ -1,0 +1,90 @@
+.hero {
+	background-color: #c4c4c4;
+	text-align: center;
+	padding-top: 118px;
+	padding-bottom: 118px;
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
+
+	@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+		screen and (min-resolution: 192dpi) and (max-width: 767px),
+		screen and (min-resolution: 2dppx) and (max-width: 767px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-bg-mobile@2x.jpg");
+	}
+
+	/* 
+768px +
+*/
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tablet.jpg");
+	}
+	/* 
+screen
+2x +
+768px +
+*/
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+		screen and (min-resolution: 192dpi) and (min-width: 768px),
+		screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-bg-tablet@2x.jpg");
+	}
+
+	/* 
+1200px +
+*/
+	@media screen and (min-width: 1200px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-bg-desktop.jpg");
+	}
+	/* 
+2x +
+1200px +
+screen
+*/
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+		screen and (min-resolution: 192dpi) and (min-width: 1200px),
+		screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-bg-desktop@2x.jpg");
+	}
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	&__title {
+		color: var(--title-text-color);
+		font-weight: 900;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 26px;
+		line-height: 1.62;
+		text-align: center;
+		letter-spacing: 0.06em;
+
+		@media screen and (min-width: 480px) {
+			width: 360px;
+		}
+		@media screen and (min-width: 1200px) {
+			font-size: 44px;
+			line-height: 1.36;
+			width: 696px;
+		}
+	}
+
+	&__button {
+		padding: 10px 32px;
+	}
+}

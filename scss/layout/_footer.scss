@@ -1,0 +1,132 @@
+.page-footer {
+	background-color: var(--title-background-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 60px;
+
+		@media screen and (min-width: 768px) {
+			align-items: baseline;
+			flex-direction: row;
+		}
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 20px;
+		@media screen and (min-width: 1200px) {
+			text-align: left;
+		}
+
+		color: var(--title-text-color);
+	}
+	&__social {
+		fill: var(--title-text-color);
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+.footer-address__container {
+	text-align: center;
+	@media screen and (min-width: 1200px) {
+		text-align: left;
+	}
+}
+
+.footer-address {
+	margin-top: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.71;
+	li + li {
+		margin-top: 8px;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-right: 70px;
+		li + li {
+			margin-top: 9px;
+		}
+	}
+
+	&__link {
+		color: var(--title-text-color);
+		transition: color var(--animation);
+		&:hover,
+		&:focus {
+			color: var(--accent-color);
+		}
+	}
+	&__contact {
+		color: var(--footer-text-color);
+		transition: color var(--animation);
+		&:hover,
+		&:focus {
+			color: var(--accent-color);
+		}
+	}
+}
+
+.form-footer {
+	@media screen and (min-width: 1200px) {
+		&__container {
+			margin-left: auto;
+		}
+	}
+
+	margin-right: auto;
+	margin-right: auto;
+	text-align: center;
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		gap: 12px;
+	}
+
+	&__input {
+		font-size: 16px;
+		line-height: 1.25;
+		margin-bottom: 20px;
+
+		width: 100%;
+		@media screen and (min-width: 768px) {
+			width: 450px;
+		}
+		@media screen and (min-width: 1200px) {
+			width: 358px;
+			margin-bottom: 0;
+		}
+
+		height: 50px;
+		padding: 15px 16px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+		border-radius: 4px;
+		background: var(--title-background-color);
+		color: var(--title-text-color);
+		transition: border-color var(--animation);
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+		&:focus {
+			border-color: var(--accent-color);
+			outline: none;
+		}
+	}
+	&__button {
+		margin-right: auto;
+		margin-left: auto;
+
+		padding: 10px 28px;
+		display: flex;
+		justify-content: center;
+
+		gap: 10px;
+	}
+}
